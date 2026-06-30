@@ -1,0 +1,13 @@
+{
+  "lastChangelogVersion": "0.80.2",
+  "theme": "dark",
+  "defaultProvider": "nvidia",
+  "defaultModel": "stepfun-ai/step-3.7-flash",
+  "defaultThinkingLevel": "high",
+  "packages": [
+    "npm:@qraxiss/pi-gemini-auth",
+    "npm:@raquezha/antigravity",
+    "npm:@aliou/pi-guardrails",
+    "npm:pi-nvim"
+  ]
+}
