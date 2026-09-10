@@ -1,0 +1,102 @@
+{
+  "_comment": "hyperresearch-pi model tier config | location: ~/.pi/agent/hyperresearch-models.json | reload after edit",
+  "_format": "Model ID format: provider/model-id (first/second column of `pi --list-models`). Replace the placeholder values below with real IDs from your environment.",
+  "_priority": "Priority (high -> low): 1) subagent tool 'model' param (per-spawn, temporary) 2) agents.<name> (persistent, per-agent override) 3) tiers.<tier> (persistent, tier default)",
+  "_fallback": "fallbackModels is an array. When the primary model fails on a retryable error (no API key, rate limit, 502/503, timeout), pi-subagents auto-tries each fallback in order. If the whole chain is unavailable, the spawn hard-fails.",
+
+  "tiers": {
+    "opus": {
+      "_role": "Opus-tier — strong-reasoning roles (9 agents): draft-orchestrator, synthesizer, 4 critics, patcher, polish-auditor, readability-recommender",
+      "model": "opus",
+      "fallbackModels": [
+        "sonnet"
+      ]
+    },
+    "sonnet": {
+      "_role": "Sonnet-tier — reading-comprehension roles (5 agents): fetcher, source-analyst, loci-analyst, depth-investigator, corpus-critic",
+      "model": "sonnet",
+      "fallbackModels": []
+    }
+  },
+
+  "agents": {
+    "hyperresearch-fetcher": {
+      "_note": "fetcher runs in high parallelism (8-12), use a cheap model to control cost",
+      "model": "sonnet",
+      "fallbackModels": []
+    },
+    "hyperresearch-source-analyst": {
+      "model": "sonnet",
+      "fallbackModels": []
+    },
+    "hyperresearch-loci-analyst": {
+      "model": "sonnet",
+      "fallbackModels": []
+    },
+    "hyperresearch-depth-investigator": {
+      "model": "sonnet",
+      "fallbackModels": []
+    },
+    "hyperresearch-corpus-critic": {
+      "model": "sonnet",
+      "fallbackModels": []
+    },
+
+    "hyperresearch-draft-orchestrator": {
+      "model": "opus",
+      "fallbackModels": [
+        "sonnet"
+      ]
+    },
+    "hyperresearch-synthesizer": {
+      "_note": "synthesizer writes the final report, quality is critical, do not fall back to weaker models",
+      "model": "opus",
+      "fallbackModels": [
+        "sonnet"
+      ]
+    },
+    "hyperresearch-dialectic-critic": {
+      "model": "opus",
+      "fallbackModels": [
+        "sonnet"
+      ]
+    },
+    "hyperresearch-depth-critic": {
+      "model": "opus",
+      "fallbackModels": [
+        "sonnet"
+      ]
+    },
+    "hyperresearch-width-critic": {
+      "model": "opus",
+      "fallbackModels": [
+        "sonnet"
+      ]
+    },
+    "hyperresearch-instruction-critic": {
+      "model": "opus",
+      "fallbackModels": [
+        "sonnet"
+      ]
+    },
+    "hyperresearch-patcher": {
+      "_note": "patcher is tool-locked to read+edit, needs strong judgment",
+      "model": "opus",
+      "fallbackModels": [
+        "sonnet"
+      ]
+    },
+    "hyperresearch-polish-auditor": {
+      "model": "opus",
+      "fallbackModels": [
+        "sonnet"
+      ]
+    },
+    "hyperresearch-readability-recommender": {
+      "model": "opus",
+      "fallbackModels": [
+        "sonnet"
+      ]
+    }
+  }
+}
