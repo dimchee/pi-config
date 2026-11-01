@@ -1,16 +1,16 @@
 {
-  "lastChangelogVersion": "0.84.2",
+  "lastChangelogVersion": "1.4.0",
   "theme": "dark",
-  "defaultProvider": "opencode",
-  "defaultModel": "hy3-free",
+  "defaultProvider": "opencode-free",
+  "defaultModel": "deepseek-v4.1-flash-free",
   "defaultThinkingLevel": "high",
   "packages": [
-    "npm:@qraxiss/pi-gemini-auth",
-    "npm:@raquezha/antigravity",
     "npm:@aliou/pi-guardrails",
     "npm:pi-nvim",
-    "npm:pi-subagents",
-    "npm:pi-observational-memory",
-    "npm:pi-questions"
-  ]
+    "npm:pi-questions",
+    "npm:@zeldrisho/pi-opencode-free"
+  ],
+  "compaction": {
+    "enabled": false
+  }
 }
