@@ -1,0 +1,3 @@
+[submodule "agent/skills/nixos"]
+	path = agent/skills/nixos
+	url = https://github.com/marceloeatworld/nixos-ai-skill.git

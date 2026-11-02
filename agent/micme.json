@@ -1,0 +1,18 @@
+{
+  "$schema": "https://raw.githubusercontent.com/senad-d/micme/main/micme.schema.json",
+  "MICME_AUTO_DOWNLOAD_MODEL": "0",
+  "MICME_LANGUAGE": "auto",
+  "MICME_TRANSCRIPTION_MODE": "clip",
+  "MICME_STREAM_STEP_MS": "1000",
+  "MICME_STREAM_LENGTH_MS": "5000",
+  "MICME_STREAM_KEEP_MS": "500",
+  "MICME_STREAM_MAX_TOKENS": "64",
+  "MICME_STREAM_WORDS_PER_CHUNK": "10",
+  "MICME_STREAM_FLUSH_MS": "700",
+  "MICME_STREAM_KEEP_CONTEXT": "0",
+  "MICME_STREAM_FINALIZE_WITH_CLIP": "1",
+  "MICME_STREAM_VAD_THRESHOLD": "0.45",
+  "MICME_TRANSCRIBE_BACKEND": "whisper.cpp",
+  "MICME_STREAM_CAPTURE": "-1",
+  "MICME_AUDIO_DEVICE": "default"
+}

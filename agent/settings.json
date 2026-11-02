@@ -1,15 +1,16 @@
 {
   "lastChangelogVersion": "1.4.0",
   "theme": "dark",
-  "defaultProvider": "opencode",
-  "defaultModel": "x-preview-f-free",
+  "defaultProvider": "opencode-free",
+  "defaultModel": "deepseek-v4.1-flash-free",
   "defaultThinkingLevel": "high",
   "packages": [
     "npm:@aliou/pi-guardrails",
     "npm:pi-nvim",
-    "npm:pi-skill-toggle",
-    "npm:pi-ask-user",
-    "npm:opencode-pi"
+    "npm:pi-questions",
+    "npm:@zeldrisho/pi-opencode-free"
   ],
-  "skills": []
+  "compaction": {
+    "enabled": false
+  }
 }
