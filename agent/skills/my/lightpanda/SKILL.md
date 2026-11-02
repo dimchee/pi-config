@@ -1,6 +1,6 @@
 ---
 name: web-search
-description: Web search and content extraction via lightpanda, lightweight headless browser. Use for searching documentation, facts, or any web content.
+description: Web search and content extraction via lightpanda, lightweight headless browser. Prefer camoufox. Use for searching documentation, facts, or any web content.
 ---
 
 # Lightpanda

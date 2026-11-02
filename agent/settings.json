@@ -1,13 +1,15 @@
 {
-  "lastChangelogVersion": "0.80.2",
+  "lastChangelogVersion": "1.4.0",
   "theme": "dark",
-  "defaultProvider": "nvidia",
-  "defaultModel": "stepfun-ai/step-3.7-flash",
+  "defaultProvider": "opencode",
+  "defaultModel": "x-preview-f-free",
   "defaultThinkingLevel": "high",
   "packages": [
-    "npm:@qraxiss/pi-gemini-auth",
-    "npm:@raquezha/antigravity",
     "npm:@aliou/pi-guardrails",
-    "npm:pi-nvim"
-  ]
+    "npm:pi-nvim",
+    "npm:pi-skill-toggle",
+    "npm:pi-ask-user",
+    "npm:opencode-pi"
+  ],
+  "skills": []
 }
