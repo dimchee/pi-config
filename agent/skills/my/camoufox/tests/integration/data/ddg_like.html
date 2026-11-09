@@ -1,0 +1,28 @@
+<!-- Mimics the DuckDuckGo Lite result DOM so EXTRACT_JS can be tested
+     offline through a real browser. -->
+<table border="0">
+  <tr><td>1.&nbsp;</td>
+      <td><a rel="nofollow" class='result-link'
+             href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fexample.org%2Fa&amp;rut=x">Result One</a></td></tr>
+  <tr><td>&nbsp;&nbsp;&nbsp;</td>
+       <td class='result-snippet'>first snippet text</td></tr>
+  <tr><td>&nbsp;&nbsp;&nbsp;</td>
+       <td><span class='link-text'>example.org</span></td></tr>
+
+  <tr><td>2.&nbsp;</td>
+      <td><a rel="nofollow" class='result-link'
+             href="https://direct.example.net/b">Direct Result (no redirect)</a></td></tr>
+  <tr><td>&nbsp;&nbsp;&nbsp;</td>
+       <td class='result-snippet'>second snippet</td></tr>
+
+  <!-- untitled row: must be filtered out -->
+  <tr><td>3.&nbsp;</td>
+      <td><a rel="nofollow" class='result-link' href="https://x.example/c">&nbsp;</a></td></tr>
+</table>
+
+<form class="next_form" action="/lite/" method="post">
+  <input type="hidden" name="q"   value="test query">
+  <input type="hidden" name="s"   value="10">
+  <input type="hidden" name="vqd" value="4-vqdtoken">
+  <input type="hidden" name="dc"  value="12">
+</form>

@@ -2,3 +2,4 @@ sessions/
 npm/
 bin/
 auth.json
+tmp/

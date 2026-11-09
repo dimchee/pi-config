@@ -1,0 +1,20 @@
+<!-- Reproduces the P1/P8 hang: DDG sometimes renders results inside a
+     layout <table border="0"> whose first matched node never becomes
+     VISIBLE (display:none here), so the old visible-state wait guaranteed
+     a timeout even though parsing would succeed. The new attached-state
+     wait plus EXTRACT_JS (which reads textContent/attributes) works. -->
+<table border="0" style="display:none">
+  <tr><td>1.&nbsp;</td>
+      <td><a rel="nofollow" class='result-link'
+             href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fexample.org%2Fa&amp;rut=x">Hidden Table Result</a></td></tr>
+  <tr><td>&nbsp;&nbsp;&nbsp;</td>
+       <td class='result-snippet'>snippet from hidden table layout</td></tr>
+  <tr><td>&nbsp;&nbsp;&nbsp;</td>
+       <td><span class='link-text'>example.org</span></td></tr>
+</table>
+
+<form class="next_form" action="/lite/" method="post">
+  <input type="hidden" name="q" value="test query">
+  <input type="hidden" name="s" value="10">
+  <input type="hidden" name="vqd" value="4-vqdtoken">
+</form>

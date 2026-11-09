@@ -1,0 +1,16 @@
+[project]
+name = "camoufoxtest"
+version = "0.2.0"
+description = "Camoufox agent tool: DuckDuckGo search + Playwright bridge server and CLI"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "camoufox[geoip]>=0.5.5",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+asyncio_mode = "auto"
+markers = [
+    "live: hits DuckDuckGo/network; enable with RUN_LIVE=1",
+]

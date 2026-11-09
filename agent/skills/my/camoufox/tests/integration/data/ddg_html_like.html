@@ -1,0 +1,35 @@
+<!-- Mimics the html.duckduckgo.com result DOM so HTML_EXTRACT_JS can be
+     tested offline through a real browser (ticket P1#4 engine fallback). -->
+<div class="results">
+  <div class="result results_links results_links_deep">
+    <h2 class="result__title">
+      <a rel="nofollow" class="result__a"
+         href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fexample.org%2Fa&amp;rut=abc">Html Result One</a>
+    </h2>
+    <a class="result__snippet">first snippet text</a>
+    <div class="links_main links_deep">
+      <a class="result__url" href="//duckduckgo.com/y.js?ad_domain=example.org">example.org</a>
+    </div>
+  </div>
+
+  <div class="result results_links results_links_deep">
+    <h2 class="result__title">
+      <a rel="nofollow" class="result__a"
+         href="https://direct.example.net/b">Direct Result (no redirect)</a>
+    </h2>
+    <a class="result__snippet">second snippet</a>
+  </div>
+
+  <!-- untitled link: must be filtered out by filter_results -->
+  <div class="result">
+    <h2 class="result__title"><a class="result__a" href="https://x.example/c">&nbsp;</a></h2>
+  </div>
+</div>
+
+<form action="/html/" method="post">
+  <input type="hidden" name="q" value="test query">
+  <input type="hidden" name="b" value="">
+  <input type="hidden" name="kl" value="wt-wt">
+  <input type="hidden" name="s" value="20">
+  <input type="submit" value="Next Page">
+</form>
